@@ -1,18 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-gb">
 
 <head>
   <meta charset="utf-8">
-  <title>Testing</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./asset/css/style.css" />
+  <title>Seeing City Sights</title>
 </head>
 
 <body>
-  <div id="output"></div>
+  <!-- div id="output"></div -->
 
+  <!-- max-width for ultra wide resolutions -->
+  <div class="container-fluid" style="max-width: 1400px">
+    <section class="mt-3" role="region" aria-live="polite">
+      <div id="today-header" class="jumbotron jumbotron-fluid p-1">
+        <div class="container">
+          Jumbotron here
+        </div>
+      </div>
+    </section>
+
+    
+    <div class="row">
+      <div class="col-lg-9 pb-3">
+
+        <!-- Search bar starts here -->
+        <section id="search" class="mt-3" role="region" aria-live="polite">
+          <div id="today-header" class="jumbotron jumbotron-fluid p-1">
+            <div class="container">
+              Searh box here
+            </div>
+          </div>
+        </section> 
+
+        <!-- Cards for showing suggested places -->
+        <section id="sights" class="row mt-3" role="region" aria-live="polite">
+          <div class="row ml-1">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date0" class="card-title">Place name</h6>
+                  <p id="card-img0" class="card-text">image</p>
+                  <p id="card-desc0" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date1" class="card-title">Place name</h6>
+                  <p id="card-img1" class="card-text">image</p>
+                  <p id="card-desc1" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date2" class="card-title">Place name</h6>
+                  <p id="card-img2" class="card-text">image</p>
+                  <p id="card-desc2" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seached cities list-->
+        <section>
+          <hr class="hr" />
+          <div class="list-group" id="history">History buttons go here</div>
+        </section>
+      </div>
+        
+      <!-- Side bar starts here -->
+      <div class="col-lg-3 pb-3">
+        <aside>
+          <h2 id="side-bar" class="mt-1 h3 form-label">
+            Side bar here
+          </h2>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for showing error message-->
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="error-code" class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="error-msg"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
   <script type="text/javascript" src="./assets/js/script.js"> </script>
-
-
+  
 </body>
 
 </html>
