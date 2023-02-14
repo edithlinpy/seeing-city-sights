@@ -1,0 +1,20 @@
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;  
+}
+
+
+
+/* Footer parameters */
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #222222;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
