@@ -1,10 +1,31 @@
 
-.container-fluid {
-    display: flex;
-    flex-direction: row;  
+/* Header Formating */
+header.masthead {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+    
+}  
+
+/* Banner sizes */ 
+#dimensions {
+    height: 150px;
+    width: 100%;
+    margin-left: 1px;
 }
+/* ===== Banner format End =====
 
-
+/* Displaying & Positioning of Logo within container */
+.col-lg-10 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/seeing-eye-text.png"), url("/images/seeing-eye.png");
+    background-size: 800px 450px;
+    background-repeat: no-repeat;
+    background-position: 65% 35%;
+}
+/* ===== Logo End =====
 
 /* Footer parameters */
 footer {
@@ -17,4 +38,15 @@ footer {
 footer p {
     font-size: 16px;
     margin: 0;
+}
+/* ===== Footer End =====
+
+
+/*************** Media Queries ********************/
+/* Setting Logo parameters for mobile Devices */
+@media screen and (max-width: 768px) {
+    body,
+    header {
+        flex-direction: column;
+    }
 }
