@@ -23,20 +23,19 @@
 
   <!-- max-width for ultra wide resolutions -->
   <div class="container-fluid" style="max-width: 1400px">   
-    <div class="row">
+    <div id="main-body" class="row">
       <div class="col-lg-9 pb-3">
 
         <!-- Search bar starts here -->
-        <section id="search" class="mt-3" role="region" aria-live="polite">
-          <div id="search">
+        <section class="mt-3" role="region" aria-live="polite">
+          <div>
             <form id="search-form" class="form">
               <div class="form-inline form-group">
-                <div class="input-group">
-                  <p class="h4">Search for a city: </p>
-                  <input class="form-input city-search m-1" type="text" id="search-input" placeholder="London"
+                <div class="input-group w-75">
+                  <input class="form-input city-search m-1 w-75" type="text" id="search-input" placeholder="Choose your destination"
                     aria-labelledby="form-heading" aria-controls="today forecast" />
                   <div class="input-group-append">
-                    <button type="submit" class="btn-info search-button m-1" id="search-button" aria-label="submit search">
+                    <button type="submit" class="btn btn-warning search-button m-1" id="search-button" aria-label="submit search">
                       Search
                     </button>
                   </div>
