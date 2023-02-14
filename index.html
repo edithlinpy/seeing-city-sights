@@ -1,123 +1,240 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Seeing City Sights</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./asset/css/style.css" />
-  <title>Seeing City Sights</title>
-</head>
+  <body>
+    <section id="title-banner">
+      <div class="container">
+        <div class="title">
+          <h1>Seeing City Sights</h1>
+          <p>Search and Explore!</p>
+        </div>
 
-<body>
-  <!-- div id="output"></div -->
+        <div class="main">
+          <div class="">
+            <!-- template card -->
+            <div class="card">
+              <img src="./images/London-bridge1.png" alt="" />
+              <div class="info">
+                <h3 class="place-name"></h3>
+                <p class="place-info"></p>
+                <span
+                  ><button type="button" class="btn btn-primary">
+                    Explore
+                  </button></span
+                ><!--need to update link href  ##-->
+              </div>
+            </div>
+            <!-- End of Template card-->
+          </div>
+        </div>
 
-  <!-- max-width for ultra wide resolutions -->
-  <div class="container-fluid" style="max-width: 1400px">
-    <section class="mt-3" role="region" aria-live="polite">
-      <div id="today-header" class="jumbotron jumbotron-fluid p-1">
-        <div class="container">
-          Jumbotron here
+        <div class="row">
+          <!-- First Card-->
+          <div class="col-md-4 col-sm-12">
+            <div class="card text-center">
+              <img
+                class="card-img-top"
+                src="./images/London-bridge1.png"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Place Name</h5>
+                <p class="card-text">
+                  This will have the info for the places when user searches for
+                  a POI
+                </p>
+                <a href="#">Explore</a>
+              </div>
+            </div>
+          </div>
+          <!--Second Card-->
+          <div class="col-md-4 col-sm-12">
+            <div class="card text-center">
+              <img
+                class="card-img-top"
+                src="./images/London-bridge1.png"
+                alt="image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">London</h5>
+                <p class="card-text">
+                  This will have the info for the places when user searches for
+                  a POI
+                </p>
+                <a href="#">Explore</a>
+              </div>
+            </div>
+          </div>
+          <!--Third Card-->
+          <div class="col-md-4 col-sm-12">
+            <div class="card text-center">
+              <img
+                class="card-img-top"
+                src="./images/London-bridge1.png"
+                alt="image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">London</h5>
+                <p class="card-text">
+                  This will have the info for the places when user searches for
+                  a POI.
+                </p>
+                <a href="#">Explore</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    
-    <div class="row">
-      <div class="col-lg-9 pb-3">
-
-        <!-- Search bar starts here -->
-        <section id="search" class="mt-3" role="region" aria-live="polite">
-          <div id="today-header" class="jumbotron jumbotron-fluid p-1">
-            <div class="container">
-              Searh box here
-            </div>
-          </div>
-        </section> 
-
-        <!-- Cards for showing suggested places -->
-        <section id="sights" class="row mt-3" role="region" aria-live="polite">
-          <div class="row ml-1">
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-body p-2">
-                  <h6 id="card-date0" class="card-title">Place name</h6>
-                  <p id="card-img0" class="card-text">image</p>
-                  <p id="card-desc0" class="card-text">description</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-body p-2">
-                  <h6 id="card-date1" class="card-title">Place name</h6>
-                  <p id="card-img1" class="card-text">image</p>
-                  <p id="card-desc1" class="card-text">description</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <div class="card-body p-2">
-                  <h6 id="card-date2" class="card-title">Place name</h6>
-                  <p id="card-img2" class="card-text">image</p>
-                  <p id="card-desc2" class="card-text">description</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Seached cities list-->
-        <section>
-          <hr class="hr" />
-          <div class="list-group" id="history">History buttons go here</div>
-        </section>
-      </div>
-        
-      <!-- Side bar starts here -->
-      <div class="col-lg-3 pb-3">
-        <aside>
-          <h2 id="side-bar" class="mt-1 h3 form-label">
-            Side bar here
-          </h2>
-        </aside>
-      </div>
+    <div>
+      <h1>Seeing City Sights</h1>
     </div>
-  </div>
 
-  <!-- Modal for showing error message-->
-  <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 id="error-code" class="modal-title"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- End template card -->
+
+    <!-- max-width for ultra wide resolutions -->
+    <div class="container-fluid" style="max-width: 1400px">
+      <section class="mt-3" role="region" aria-live="polite">
+        <div id="today-header" class="jumbotron jumbotron-fluid p-1">
+          <div class="container">Jumbotron here</div>
         </div>
-        <div class="modal-body">
-          <p id="error-msg"></p>
+      </section>
+
+      <div class="row">
+        <div class="col-lg-9 pb-3">
+          <!-- Search bar starts here -->
+          <section id="search" class="mt-3" role="region" aria-live="polite">
+            <div id="today-header" class="jumbotron jumbotron-fluid p-1">
+              <div class="container">Searh box here</div>
+            </div>
+          </section>
+
+          <!-- Cards for showing suggested places -->
+          <section
+            id="sights"
+            class="row mt-3"
+            role="region"
+            aria-live="polite"
+          >
+            <div class="row ml-1">
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body p-2">
+                    <h6 id="card-date0" class="card-title">Place name</h6>
+                    <p id="card-img0" class="card-text">image</p>
+                    <p id="card-desc0" class="card-text">description</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body p-2">
+                    <h6 id="card-date1" class="card-title">Place name</h6>
+                    <p id="card-img1" class="card-text">image</p>
+                    <p id="card-desc1" class="card-text">description</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body p-2">
+                    <h6 id="card-date2" class="card-title">Place name</h6>
+                    <p id="card-img2" class="card-text">image</p>
+                    <p id="card-desc2" class="card-text">description</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Seached cities list-->
+          <section>
+            <hr class="hr" />
+            <div class="list-group" id="history">History buttons go here</div>
+          </section>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+        <!-- Side bar starts here -->
+        <div class="col-lg-3 pb-3">
+          <aside>
+            <h2 id="side-bar" class="mt-1 h3 form-label">Side bar here</h2>
+          </aside>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer Section -->
-<footer>
-  <div class="contiainer-fluid">
-    <p>&copy; Seeing City Sights 2023. All Rights Reserved.</p>
-  </div>
-</footer>  
+    <!-- Modal for showing error message-->
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="error-code" class="modal-title"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="error-msg"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
-  <script type="text/javascript" src="./assets/js/script.js"> </script>
-  
-</body>
+    <!-- Footer Section -->
+    <footer>
+      <div class="contiainer-fluid">
+        <p>&copy; Seeing City Sights 2023. All Rights Reserved.</p>
+      </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+  </body>
 </html>
