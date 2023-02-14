@@ -19,6 +19,14 @@
   </head>
 
   <body>
+      <!-- Hero Section -->
+  <header class="masthead">
+    <div class ="container-fluid">
+      <div class ="row" id="dimensions">
+        <div class ="col-lg-10"></div>
+      </div>
+    </div>  
+  </header>
     <section id="title-banner">
       <div class="container">
         <div class="title">
@@ -101,11 +109,72 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
 
     <div>
       <h1>Seeing City Sights</h1>
+  <!-- max-width for ultra wide resolutions -->
+  <div class="container-fluid" style="max-width: 1400px">   
+    <div class="row">
+      <div class="col-lg-9 pb-3">
+
+        <!-- Search bar starts here -->
+        <section id="search" class="mt-3" role="region" aria-live="polite">
+          <div id="today-header" class="jumbotron jumbotron-fluid p-1">
+            <div class="container">
+              Searh box here
+            </div>
+          </div>
+        </section> 
+
+        <!-- Cards for showing suggested places -->
+        <section id="sights" class="row mt-3" role="region" aria-live="polite">
+          <div class="row ml-1">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date0" class="card-title">Place name</h6>
+                  <p id="card-img0" class="card-text">image</p>
+                  <p id="card-desc0" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date1" class="card-title">Place name</h6>
+                  <p id="card-img1" class="card-text">image</p>
+                  <p id="card-desc1" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body p-2">
+                  <h6 id="card-date2" class="card-title">Place name</h6>
+                  <p id="card-img2" class="card-text">image</p>
+                  <p id="card-desc2" class="card-text">description</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seached cities list-->
+        <section>
+          <hr class="hr" />
+          <div class="list-group" id="history">History buttons go here</div>
+        </section>
+      </div>
+        
+      <!-- Side bar starts here -->
+      <div class="col-lg-3 pb-3 border">
+        <aside>
+          <h2 id="side-bar" class="mt-1 h3 form-label">
+            Side bar here
+          </h2>
+        </aside>
+      </div>
     </div>
 
     <!-- End template card -->
