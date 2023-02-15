@@ -35,6 +35,16 @@ function getCitySights(cityName) {
     placeID = geoResult.features[0].properties.place_id;
     console.log("Place ID: "+placeID);
 
+    // De-code of Lat & Lon for weather API
+    coOrdLon = geoResult.features[0].geometry.coordinates[0];
+    console.log("coOrdLon: "+coOrdLon);
+
+    coOrdLat = geoResult.features[0].geometry.coordinates[1];
+    console.log("coOrdLat: "+coOrdLat);
+
+    // Function for displaying weather info in Side Bar 
+    getWeatherLonLat(coOrdLat, coOrdLon);
+
     // get tourist sights from Places API
     let limit = 20;
     let categories = "tourism.sights";
@@ -65,8 +75,7 @@ function getCitySights(cityName) {
         cityList.push(cityName);
         historyDiv.append(`<button class="btn-warning mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
         localStorage.setItem("cityName", cityList.toString());
-       }
-
+      }
   })
   .catch(error => showErrorMsg("002", "Sorry, city not found."));
 }
@@ -112,3 +121,49 @@ historyDiv.on('click', '.city', function (event) { // .city is the class of the 
 // show stored city buttons on loading page
 showStoredButtons();
 // getCitySights("London");
+
+
+// ********* Side Bar - Weather Component **********
+
+//Declared variables linked to html Tags
+const cityWeatherName = document.getElementById('city-name');
+const weatherId = document.getElementById('weather');
+
+
+// Function for clearing prevoius Child elements data 
+function clearChildDiv (targetDiv) {
+  while (targetDiv.firstChild) {
+    targetDiv.removeChild(targetDiv.firstChild);
+  }
+}
+
+function getWeatherLonLat(latitude, lonitude) {
+
+  // Clear All weather details before displaying new city info
+  clearChildDiv (cityWeatherName);
+  clearChildDiv (weatherId);
+
+  // get Locations weather from OpenWeather API
+  fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+latitude+"&lon="+lonitude+"&appid=fc1a788e45551d795ccebca44d61a4ea")
+      .then(response => response.json())
+      .then(result => {
+
+          // Dynamically creating elements for displaying City, Temp, Wind & Humid
+          h3 = document.createElement('H3');
+          h3.textContent = 'City: ' +result.city.name;
+          cityWeatherName.appendChild(h3);
+
+          p = document.createElement('P')
+          p.textContent = 'Temp: ' +result.list[0].main.temp +' °C ';
+          weatherId.appendChild(p);
+      
+          p = document.createElement('P')
+          p.textContent = 'Wind: '+result.list[0].wind.speed + ' KPH';
+          weatherId.appendChild(p);
+      
+          p = document.createElement('P')
+          p.textContent = 'Humidity: '+result.list[0].main.humidity + ' %';
+          weatherId.appendChild(p);
+    }) 
+    .catch(error => showErrorMsg("004", "Sorry, Weather Location not found."))
+  }
