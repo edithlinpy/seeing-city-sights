@@ -1,4 +1,66 @@
+/*@media (min-width: 768px) and (max-width: 1400px)*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+.body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray !important; 
+}
+.main {
+    border: solid 1px black;
 
+}
+/*title banner styling*/
+
+
+#title-banner {
+    background-color: rgb(228, 245, 239);
+    padding: 30px, 0px;
+
+}
+#title-banner h1 {
+    font-weight: 900;
+    font-size: 52px;
+    padding-bottom: 5px;
+    
+}
+.title {
+    text-align: center;
+    padding: 25px 0px;
+}
+.title p{
+    font-size: 32px;
+}
+button {
+    padding: 0px 20px;
+}
+.card-body {
+    box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1)
+}
+.card {
+    margin: 20px 10px;
+}
+.card-body a {
+    color: rgb(35, 130, 240);
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: auto;
+    font-weight: 600;
+}
+.card-body a:hover {
+    color: aqua;
+    text-decoration: none;
+}
+.container-fluid {
+    display: flex;
+    flex-direction: row; 
+} 
 /* Header Formating */
 header.masthead {
     padding-top: 75px;

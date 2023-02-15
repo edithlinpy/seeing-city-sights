@@ -1,3 +1,72 @@
+function searchPhotos() {
+  let clientId = "dWC_QC6wp6Nk4NUsbXyKxr-eG4QH3PrBf100kAiIh6k";
+  let query = document.getElementById("search").value;
+  let url = "https://api.unsplash.com/search/photos/?client_id="+clientId+"&query="+query;
+// make fetch request to the unsplash.api
+  fetch(url)
+  .then(function (data) {
+    return data.json()
+  })
+  .then(function (data) {
+    console.log(data)
+
+  })
+}
+
+
+
+// Start of api search functions
+let requestOptions = {
+  method: "GET",
+};
+
+const apiKey = "057aa2c42e8e4730af75e101b91db1a7";
+let place = "new york";
+console.log("Place: " + place);
+let geoQueryURL = "https://api.geoapify.com/v1/geocode/search?text=" + place;
+
+// get placeID from Geocoding API
+fetch(geoQueryURL + "&apiKey=" + apiKey, requestOptions)
+  .then((groResponse) => groResponse.json())
+  .then((geoResult) => {
+    console.log(geoResult);
+    placeID = geoResult.features[0].properties.place_id;
+    console.log("Place ID: " + placeID);
+
+    // get tourist sights from Places API
+    let limit = 1;
+    let categories = "tourism.sights";
+    // let categories = "tourism.attraction";
+    let outputString = "";
+
+    fetch(
+      "https://api.geoapify.com/v2/places?categories=" +
+        categories +
+        "&filter=place:" +
+        placeID +
+        "&limit=" +
+        limit +
+        "&apiKey=" +
+        apiKey,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        result.features.forEach((element) => {
+          
+          outputString +=
+            "Place name: " +
+            element.properties.name +
+            "<br />Address: " +
+            element.properties.address_line2 +
+            "</p>";
+          $(".place-name").html(outputString);
+        });
+      })
+      .catch((error) => console.log("error", error));
+  })
+  .catch((error) => console.log("error", error));
 const historyDiv = $('#history');
 let cityName = ""; // stores user input
 let sightsData = [];
@@ -54,6 +123,7 @@ function getCitySights(cityName) {
             cityObj.name = element.properties.name;
             cityObj.address = element.properties.address_line2;
             sightsData.push(cityObj);
+            
           }
         });
       })
