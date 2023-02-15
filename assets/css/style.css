@@ -37,7 +37,9 @@
 .title p{
     font-size: 32px;
 }
-
+button {
+    padding: 0px 20px;
+}
 .card-body {
     box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.1)
 }
