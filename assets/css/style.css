@@ -89,6 +89,11 @@ header.masthead {
 }
 /* ===== Logo End =====
 
+/* Search bar formatting */
+#main-body {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
 /* Footer parameters */
 footer {
     padding: 25px 0;

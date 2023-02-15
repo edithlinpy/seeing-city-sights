@@ -133,7 +133,7 @@ function getCitySights(cityName) {
 
       if (!cityList.includes(cityName)) {
         cityList.push(cityName);
-        historyDiv.append(`<button class="btn-info mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
+        historyDiv.append(`<button class="btn-warning mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
         localStorage.setItem("cityName", cityList.toString());
        }
 
@@ -147,7 +147,7 @@ function showStoredButtons() {
     cityList = cities.split(",");
     // console.log("cityList");
     cityList.forEach(cityName => {
-      historyDiv.append(`<button class="btn-info mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
+      historyDiv.append(`<button class="btn btn-warning mb-2" data-city="${cityName}"> ${cityName} </button> `);
     });
   }
 }
@@ -180,5 +180,5 @@ historyDiv.on('click', '.city', function (event) { // .city is the class of the 
 });
 
 // show stored city buttons on loading page
-// showStoredButtons();
-getCitySights("London");
+showStoredButtons();
+// getCitySights("London");
