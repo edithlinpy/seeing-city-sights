@@ -1,4 +1,7 @@
 const historyDiv = $('#history');
+const hotelAnchor = $('#hotel-anchor');
+const restaurantAnchor = $('#restaurant-anchor');
+const extraDiv = $('#extra');
 let cityName = ""; // stores user input
 let sightsData = [];
 let cityList = []; // for showing history buttons
@@ -73,9 +76,18 @@ function getCitySights(cityName) {
 
       if (!cityList.includes(cityName)) {
         cityList.push(cityName);
-        historyDiv.append(`<button class="btn-warning mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
+        historyDiv.append(`<button class="btn btn-warning mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
         localStorage.setItem("cityName", cityList.toString());
       }
+
+      // Set Hotel & Restaurant links
+      console.log('Set Hotel & Restaurant links');
+      let searchParam = cityName.replace(" ","_");
+      hotelAnchor.attr("href", "https://www.hotelscombined.com/Place/"+searchParam+".htm");
+      searchParam = cityName.replace(" ","-");
+      restaurantAnchor.attr("href", "https://restaurantguru.com/"+searchParam+"#restaurant-list")
+      extraDiv.css("display", "block");
+      
   })
   .catch(error => showErrorMsg("002", "Sorry, city not found."));
 }
@@ -86,7 +98,7 @@ function showStoredButtons() {
     cityList = cities.split(",");
     // console.log("cityList");
     cityList.forEach(cityName => {
-      historyDiv.append(`<button class="btn btn-warning mb-2" data-city="${cityName}"> ${cityName} </button> `);
+      historyDiv.append(`<button class="btn btn-warning mb-2 city" data-city="${cityName}"> ${cityName} </button> `);
     });
   }
 }
@@ -140,15 +152,13 @@ historyDiv.on('click', '.city', function (event) { // .city is the class of the 
   event.preventDefault();
 
   cityName = $(event.target).attr("data-city");
-  // console.log("City:"+cityName);
+  console.log("City (historyDiv):"+cityName);
 
-  // forcastData = []; // init forcastData array
   getCitySights(cityName);
 });
 
 // show stored city buttons on loading page
 showStoredButtons();
-// getCitySights("London");
 
 
 // ********* Side Bar - Weather Component **********
@@ -204,5 +214,8 @@ hotels.appendChild(h3);
 h3 = document.createElement('H3')
 h3.textContent = 'Restaurant Information';
 restaurants.appendChild(h3);
+
+// hide the side bar on loading page
+extraDiv.css("display", "none");
 
  
