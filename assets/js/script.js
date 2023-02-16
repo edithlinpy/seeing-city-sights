@@ -33,14 +33,14 @@ function getCitySights(cityName) {
   .then(geoResult => {
     console.log(geoResult);
     placeID = geoResult.features[0].properties.place_id;
-    console.log("Place ID: "+placeID);
+    //console.log("Place ID: "+placeID);
 
     // De-code of Lat & Lon for weather API
     coOrdLon = geoResult.features[0].geometry.coordinates[0];
-    console.log("coOrdLon: "+coOrdLon);
+    //console.log("coOrdLon: "+coOrdLon);
 
     coOrdLat = geoResult.features[0].geometry.coordinates[1];
-    console.log("coOrdLat: "+coOrdLat);
+    //console.log("coOrdLat: "+coOrdLat);
 
     // Function for displaying weather info in Side Bar 
     getWeatherLonLat(coOrdLat, coOrdLon);
@@ -91,6 +91,33 @@ function showStoredButtons() {
   }
 }
 
+// create function to searchPhotos using query from unsplash api ********
+function searchPhotos() {
+  let clientId = "dWC_QC6wp6Nk4NUsbXyKxr-eG4QH3PrBf100kAiIh6k";
+  let query = document.getElementById("search-input").value;
+  let url = "https://api.unsplash.com/search/photos/?client_id="+clientId+"&page=1&per_page=1&query="+query;
+// make fetch request to the unsplash.api
+  fetch(url)
+  .then(function (data) {
+    return data.json()
+  })
+  .then(function (data) {
+    console.log(data);
+    
+    const imageUrl = data.results[0].urls.thumb; 
+    const imageElement = document.createElement('img');
+    const cardImage = document.querySelector(".card-body");
+    imageElement.src = imageUrl;
+    cardImage.appendChild(imageElement);
+    
+
+  })
+}
+  
+
+
+
+
 // handling the search city action
 $("#search-button").on("click", function(event) {
   // Preventing the submit button from trying to submit the form
@@ -105,6 +132,7 @@ $("#search-button").on("click", function(event) {
     }
 
     getCitySights(cityName);
+    searchPhotos();
 
 });
 
