@@ -3,6 +3,7 @@ let cityName = ""; // stores user input
 let sightsData = [];
 let cityList = []; // for showing history buttons
 
+
 // show error message modal
 function showErrorMsg(errorCode, errorMsg) {
   // hide the weather information sections
@@ -21,6 +22,7 @@ function showErrorMsg(errorCode, errorMsg) {
 function getCitySights(cityName) {
   let requestOptions = {
       method: 'GET',
+      
     };
 
   const apiKey = "057aa2c42e8e4730af75e101b91db1a7";
@@ -105,8 +107,10 @@ $("#search-button").on("click", function(event) {
     }
 
     getCitySights(cityName);
+    
 
 });
+
 
 historyDiv.on('click', '.city', function (event) { // .city is the class of the button
   event.preventDefault();
