@@ -171,3 +171,14 @@ function getWeatherLonLat(latitude, lonitude) {
     }) 
     .catch(error => showErrorMsg("004", "Sorry, Weather Location not found."))
   }
+
+// Side Bar Continued: - 
+// Dynamically creating elements for displaying Links to Hotels & Eateries
+h3 = document.createElement('H3')
+h3.textContent = 'Hotel Information';
+hotels.appendChild(h3);
+h3 = document.createElement('H3')
+h3.textContent = 'Restaurant Information';
+restaurants.appendChild(h3);
+
+ 
