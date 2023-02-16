@@ -15,15 +15,15 @@ header.masthead {
 
 /* Displaying & Positioning of Logo within container */
 .col-lg-10 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("/images/seeing-eye-text.png"),
-    url("/images/seeing-eye.png");
-  background-size: 800px 450px;
-  background-repeat: no-repeat;
-  background-position: 65% 35%;
-}
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/images/seeing-eye-text.png),
+      url(/images/seeing-eye.png);
+    background-size: 800px 450px;
+    background-repeat: no-repeat, repeat;
+    background-position: 65% 35%;
+  }
 /* ===== Logo End =====
 
 /* Search bar formatting */
