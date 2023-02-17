@@ -27,8 +27,10 @@ When a user click on a city in the search history, above information of that cit
 
 Once a city being searched, it will be added to the search history, city information will be shown again by clicking a city button.
 
-:arrow_right: Search results
-![Search results](https://github.com/edithlinpy/seeing-city-sights/blob/main/images/screen.jpg?raw=true)
+:arrow_right: Screenshots
+![Screen 1](https://github.com/edithlinpy/seeing-city-sights/blob/main/images/screen1.jpg?raw=true)
+
+![Screen 2](https://github.com/edithlinpy/seeing-city-sights/blob/main/images/screen2.jpg?raw=true)
 
 ## Credits
 
@@ -39,6 +41,26 @@ This project is made possible by the wonderful people listed in this document.
 - [Keith Howell](https://github.com/44-khowell)
 
 - [Khwaja Sultan](https://github.com/SajSultan)
+
+### Breakdown of tasks and roles:
+
+:small_orange_diamond: Wireframe - Keith
+
+:small_orange_diamond: Research on APIs - all members
+
+:small_orange_diamond: Geoapify API call - Edith
+
+:small_orange_diamond: OpenWeather API call - Keith
+
+:small_orange_diamond: Unsplash API call - Khwaja
+
+:small_orange_diamond: Header, Footer and Sidebar - Keith
+
+:small_orange_diamond: Search and history functions - Edith
+
+:small_orange_diamond: Error message Modal - Edith
+
+:small_orange_diamond: Place information cards - Khwaja
 
 ## License
 
