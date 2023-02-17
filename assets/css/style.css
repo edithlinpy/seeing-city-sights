@@ -2,7 +2,14 @@
 header.masthead {
   padding-top: 75px;
   padding-bottom: 75px;
-  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+  /* background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)); */
+  background-image: url("/images/new-york.jpg"), url("/images/tower-bridge.jpg");
+  /* background-image: url("../images/new-york.jpg"), url("../images/tower-bridge.jpg"); */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../images/new-york.jpg"), url("../images/tower-bridge.jpg"); */
+  /* background: linear-gradient(rgba(255, 255, 255, 0.5),black);  */
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-size: 800px 450px;
+  background-blend-mode: difference;
 }
 
 /* Banner sizes */
@@ -24,11 +31,23 @@ header.masthead {
   background-repeat: no-repeat;
   background-position: 65% 35%;
 }
+
 /* ===== Logo End =====
 
 /* Search bar formatting */
 #main-body {
-  background-color: rgba(0, 0, 255, 0.5);
+  /* background-color: rgba(0, 0, 255, 0.5); */
+  background: linear-gradient(black, rgb(128, 128, 128, 0.5),#222222); 
+
+}
+
+.btn-primary {
+  background-color: #6082B6 !important;
+  border-color: #6082B6 !important;
+}
+
+.btn-primary:hover {
+  background-color: #B0C4DE !important;
 }
 /* Card image and cards info */
 .card {
@@ -58,6 +77,14 @@ header.masthead {
     top: 92%;
     left: 55%;
   }
+
+#city-weather {
+  background-color: #1`;
+}
+
+#weather {
+  font-size: medium;
+}
 
 /* Footer parameters */
 footer {
