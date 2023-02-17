@@ -182,8 +182,8 @@ function getWeatherLonLat(latitude, lonitude) {
       .then(result => {
 
           // Dynamically creating elements for displaying City, Temp, Wind & Humid
-          h3 = document.createElement('H3');
-          h3.textContent = 'City: ' +result.city.name;
+          h3 = document.createElement('H4');
+          h3.textContent = result.city.name;
           cityWeatherName.appendChild(h3);
 
           // Setting Temp to Centigrade
@@ -206,10 +206,10 @@ function getWeatherLonLat(latitude, lonitude) {
 
 // Side Bar Continued: - 
 // Dynamically creating elements for displaying Links to Hotels & Eateries
-h3 = document.createElement('H3')
+h3 = document.createElement('H4')
 h3.textContent = 'Hotel Information';
 hotels.appendChild(h3);
-h3 = document.createElement('H3')
+h3 = document.createElement('H4')
 h3.textContent = 'Restaurant Information';
 restaurants.appendChild(h3);
 
