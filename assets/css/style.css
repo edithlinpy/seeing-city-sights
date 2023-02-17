@@ -1,15 +1,9 @@
 /* Header Formating */
 header.masthead {
-  padding-top: 75px;
-  padding-bottom: 75px;
-  /* background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)); */
-  background-image: url("/images/new-york.jpg"), url("/images/tower-bridge.jpg");
-  /* background-image: url("../images/new-york.jpg"), url("../images/tower-bridge.jpg"); */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../images/new-york.jpg"), url("../images/tower-bridge.jpg"); */
-  /* background: linear-gradient(rgba(255, 255, 255, 0.5),black);  */
-  /* background: rgba(0, 0, 0, 0.5); */
-  background-size: 800px 450px;
-  background-blend-mode: difference;
+  /* padding-top: 75px;
+  padding-bottom: 75px; */
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 75%, black), url("../../images/cities.jpg");
+  background-size: cover;
 }
 
 /* Banner sizes */
@@ -21,15 +15,17 @@ header.masthead {
 /* ===== Banner format End =====
 
 /* Displaying & Positioning of Logo within container */
-.col-lg-10 {
+
+
+ .col-lg-10 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/images/seeing-eye-text.png),
-    url(/images/seeing-eye.png);
-  background-size: 800px 450px;
-  background-repeat: no-repeat;
-  background-position: 65% 35%;
+  /* background-image: url(/images/seeing-eye-text.png), */
+    /* url(/images/seeing-eye.png); */
+  /* background-size: 800px 450px; */
+  /* background-repeat: no-repeat; */
+  /* background-position: 80% 35%; */
 }
 
 /* ===== Logo End =====
