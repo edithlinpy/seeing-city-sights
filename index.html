@@ -14,6 +14,9 @@
 
   <!-- Hero Section -->
   <header class="masthead">
+    <div id="header-image">
+      <img src="/images/header-title.png" width="400">
+    </div>
     <div class ="container-fluid">
       <div class ="row" id="dimensions">
         <div class ="col-lg-10"></div>
@@ -35,7 +38,7 @@
                   <input class="form-input city-search m-1 w-75" type="text" id="search-input" placeholder="Choose your destination"
                     aria-labelledby="form-heading" aria-controls="today forecast" />
                   <div class="input-group-append">
-                    <button type="submit" class="btn btn-warning search-button m-1" id="search-button" aria-label="submit search">
+                    <button type="submit" class="btn btn-primary search-button m-1" id="search-button" aria-label="submit search">
                       Search
                     </button>
                   </div>
@@ -89,22 +92,24 @@
       <div class="col-lg-3 pb-3">
         <aside>
           <h2 id="side-bar" class="mt-1 h3 form-label">
-            <h3 id="city-name"></h3>
-            <hr class="hr" />
-            <div id="weather"></div>
+            <div id="city-weather">
+              <h3 id="city-name"></h3>
+              <!-- <hr class="hr" /> -->
+              <div id="weather"></div>
+            </div>
           </h2>
           <div id="extra">
             <hr class="hr" />
             <h3 id="hotels"></h3>
             <img src="./images/hotel.png" style="width:335px;height:300px;">
               <div class="container1">
-                <a id="hotel-anchor" href="" target="_blank"> <button type="button" class="btn btn-warning btn-xl js-scroll-trigger">More details ...</button></a>
+                <a id="hotel-anchor" href="" target="_blank"> <button type="button" class="btn btn-primary btn-xl js-scroll-trigger">More details ...</button></a>
               </div>
             <hr class="hr" />
             <h3 id="restaurants"></h3>
             <img src="./images/food-eatery.png" style="width:335px;height:300px;">
               <div class="container2">
-                <a id="restaurant-anchor" href="" target="_blank"> <button type="button" class="btn btn-warning btn-xl js-scroll-trigger">More details ...</button></a>
+                <a id="restaurant-anchor" href="" target="_blank"> <button type="button" class="btn btn-primary btn-xl js-scroll-trigger">More details ...</button></a>
               </div>
           </div>
         </aside>
