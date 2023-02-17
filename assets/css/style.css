@@ -37,6 +37,11 @@ header.masthead {
 
 }
 
+h4 {
+  color: #003060;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .btn-primary {
   background-color: #6082B6 !important;
   border-color: #6082B6 !important;
