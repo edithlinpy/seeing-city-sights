@@ -126,10 +126,6 @@ function searchPhotos() {
   })
 }
   
-
-
-
-
 // handling the search city action
 $("#search-button").on("click", function(event) {
   // Preventing the submit button from trying to submit the form
@@ -145,7 +141,6 @@ $("#search-button").on("click", function(event) {
 
     getCitySights(cityName);
     searchPhotos();
-
 });
 
 historyDiv.on('click', '.city', function (event) { // .city is the class of the button
@@ -191,8 +186,11 @@ function getWeatherLonLat(latitude, lonitude) {
           h3.textContent = 'City: ' +result.city.name;
           cityWeatherName.appendChild(h3);
 
+          // Setting Temp to Centigrade
+          let tempcalc = (result.list[0].main.temp - 32)*5/9
+          
           p = document.createElement('P')
-          p.textContent = 'Temp: ' +result.list[0].main.temp +' °C ';
+          p.textContent = 'Temp: ' +tempcalc.toFixed(2) +' °C ';
           weatherId.appendChild(p);
       
           p = document.createElement('P')

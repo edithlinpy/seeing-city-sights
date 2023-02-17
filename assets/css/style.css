@@ -18,8 +18,8 @@ header.masthead {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/images/seeing-eye-text.png"),
-    url("/images/seeing-eye.png");
+  background-image: url(/images/seeing-eye-text.png),
+    url(/images/seeing-eye.png);
   background-size: 800px 450px;
   background-repeat: no-repeat;
   background-position: 65% 35%;
@@ -45,6 +45,19 @@ header.masthead {
   width: 100%;
   height: 50%;
 }
+
+/* Side-bar Button positioning */
+.container1 {
+  position: absolute;
+  top: 52%;
+  left: 55%;
+}
+
+.container2 {
+    position: absolute;
+    top: 92%;
+    left: 55%;
+  }
 
 /* Footer parameters */
 footer {
